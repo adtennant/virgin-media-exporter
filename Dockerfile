@@ -39,6 +39,6 @@ RUN  cargo build --release
 FROM debian:buster-slim
 
 COPY ./config config
-COPY --from=builder /app/target/release/virgin-media-prometheus-exporter /usr/local/bin
+COPY --from=builder /app/target/release/virgin-media-exporter /usr/local/bin
 
-ENTRYPOINT ["./usr/local/bin/virgin-media-prometheus-exporter"]
+ENTRYPOINT ["./usr/local/bin/virgin-media-exporter"]
