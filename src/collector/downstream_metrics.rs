@@ -122,7 +122,7 @@ impl DownstreamMetrics {
             )?,
             down_channel_frequency: UIntGaugeVec::new(
                 Opts::new(
-                    "down_channel_frequency",
+                    "down_channel_frequency_hz",
                     "Downstream Channel Frequency (Hz)",
                 ),
                 &["index"],
@@ -132,29 +132,32 @@ impl DownstreamMetrics {
                 &["index"],
             )?,
             down_channel_power: GaugeVec::new(
-                Opts::new("down_channel_power", "Downstream Channel Power (dBmV)"),
+                Opts::new("down_channel_power_dbmv", "Downstream Channel Power (dBmV)"),
                 &["index"],
             )?,
             down_channel_rx_mer: GaugeVec::new(
-                Opts::new("down_channel_rx_mer", "Downstream Channel RxMER (dB)"),
+                Opts::new("down_channel_rx_mer_db", "Downstream Channel RxMER (dB)"),
                 &["index"],
             )?,
             down_channel_correcteds: UIntGaugeVec::new(
                 Opts::new(
-                    "down_channel_correcteds",
+                    "down_channel_correcteds_total",
                     "Downstream Channel Pre RS Errors",
                 ),
                 &["index"],
             )?,
             down_channel_uncorrectables: UIntGaugeVec::new(
                 Opts::new(
-                    "down_channel_uncorrectables",
+                    "down_channel_uncorrectables_total",
                     "Downstream Channel Post RS Errors",
                 ),
                 &["index"],
             )?,
             down_channel_signal_noise: UIntGaugeVec::new(
-                Opts::new("down_channel_signal_noise", "Downstream Channel SNR (dB)"),
+                Opts::new(
+                    "down_channel_signal_noise_db",
+                    "Downstream Channel SNR (dB)",
+                ),
                 &["index"],
             )?,
         })

@@ -10,4 +10,4 @@ cargo = toml.loads(open(os.path.join(_pwd, 'Cargo.toml'), 'r').read())
 
 for section in ['dependencies']:
     for dep, version in cargo[section].items():
-        print('cargo build -p %s' % dep)
+        print('cargo build -p %s --release' % dep)

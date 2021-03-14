@@ -135,15 +135,15 @@ impl ConfigurationMetrics {
                 "Primary Downstream Service Flow SFID",
             )?,
             primary_downstream_max_traffic_rate: UIntGauge::new(
-                "primary_downstream_max_traffic_rate",
+                "primary_downstream_max_traffic_rate_bytes",
                 "Primary Downstream Service Flow Max Traffic Rate",
             )?,
             primary_downstream_max_traffic_burst: UIntGauge::new(
-                "primary_downstream_max_traffic_burst",
+                "primary_downstream_max_traffic_burst_bytes",
                 "Primary Downstream Service Flow Max Traffic Burst",
             )?,
             primary_downstream_min_reserved_rate: UIntGauge::new(
-                "primary_downstream_min_reserved_rate",
+                "primary_downstream_min_reserved_rate_bytes",
                 "Primary Downstream Service Flow Min Traffic Rate",
             )?,
 
@@ -152,19 +152,19 @@ impl ConfigurationMetrics {
                 "Primary Upstream Service Flow SFID",
             )?,
             primary_upstream_max_traffic_rate: UIntGauge::new(
-                "primary_upstream_max_traffic_rate",
+                "primary_upstream_max_traffic_rate_bytes",
                 "Primary Upstream Service Flow Max Traffic Rate",
             )?,
             primary_upstream_max_traffic_burst: UIntGauge::new(
-                "primary_upstream_max_traffic_burst",
+                "primary_upstream_max_traffic_burst_bytes",
                 "Primary Upstream Service Flow Max Traffic Burst",
             )?,
             primary_upstream_min_reserved_rate: UIntGauge::new(
-                "primary_upstream_min_reserved_rate",
+                "primary_upstream_min_reserved_rate_bytes",
                 "Primary Upstream Service Flow Min Traffic Rate",
             )?,
             primary_upstream_max_concat_burst: UIntGauge::new(
-                "primary_upstream_max_concat_burst",
+                "primary_upstream_max_concat_burst_bytes",
                 "Primary Upstream Service Flow Max Concatenated Burst",
             )?,
             primary_upstream_scheduling_type: UIntGauge::new(

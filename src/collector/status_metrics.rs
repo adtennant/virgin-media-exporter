@@ -25,11 +25,11 @@ impl StatusMetrics {
     pub fn new() -> Result<Self> {
         Ok(StatusMetrics {
             acquired_down_channel_frequency: UIntGauge::new(
-                "acquired_down_channel_frequency",
+                "acquired_down_channel_frequency_hz",
                 "Acquired Downstream Channel (Hz)",
             )?,
             ranged_up_channel_frequency: UIntGauge::new(
-                "ranged_up_channel_frequency",
+                "ranged_up_channel_frequency_hz",
                 "Ranged Upstream Channel (Hz)",
             )?,
             provisioning_state: UIntGauge::new("provisioning_state", "Provisioning State")?,

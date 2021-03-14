@@ -13,7 +13,7 @@ use anyhow::Result;
 use prometheus::Registry;
 use std::net::TcpListener;
 
-const REGISTRY_PREFIX: &str = "virgin_media";
+const REGISTRY_PREFIX: &str = "virginmedia";
 
 pub struct Application {
     server: Server,

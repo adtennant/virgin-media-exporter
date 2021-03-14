@@ -155,16 +155,16 @@ impl UpstreamMetrics {
                 &["index"],
             )?,
             up_channel_frequency: UIntGaugeVec::new(
-                Opts::new("up_channel_frequency", "Upstream Channel Frequency (Hz)"),
+                Opts::new("up_channel_frequency_hz", "Upstream Channel Frequency (Hz)"),
                 &["index"],
             )?,
             up_channel_type: UIntGaugeVec::new(
-                Opts::new("up_channel_type", "Upstream Channel Type"),
+                Opts::new("up_channel_type_info", "Upstream Channel Type"),
                 &["index"],
             )?,
             up_channel_symbol_rate: UIntGaugeVec::new(
                 Opts::new(
-                    "up_channel_symbol_rate",
+                    "up_channel_symbol_rate_ksps",
                     "Upstream Channel Symbol Rate (ksps)",
                 ),
                 &["index"],
@@ -174,15 +174,21 @@ impl UpstreamMetrics {
                 &["index"],
             )?,
             up_channel_tx_power: GaugeVec::new(
-                Opts::new("up_channel_tx_power", "Upstream Channel Power (dBmV)"),
+                Opts::new("up_channel_tx_power_dbmv", "Upstream Channel Power (dBmV)"),
                 &["index"],
             )?,
             up_channel_t3_timeouts: UIntGaugeVec::new(
-                Opts::new("up_channel_t3_timeouts", "Upstream Channel T3 Timeouts"),
+                Opts::new(
+                    "up_channel_t3_timeouts_total",
+                    "Upstream Channel T3 Timeouts",
+                ),
                 &["index"],
             )?,
             up_channel_t4_timeouts: UIntGaugeVec::new(
-                Opts::new("up_channel_t4_timeouts", "Upstream Channel T4 Timeouts"),
+                Opts::new(
+                    "up_channel_t4_timeouts_total",
+                    "Upstream Channel T4 Timeouts",
+                ),
                 &["index"],
             )?,
         })

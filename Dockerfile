@@ -34,11 +34,11 @@ RUN python ./build-deps.py | while read cmd; do \
 # RUN cargo build-deps --release
 
 COPY ./src src
-RUN  cargo build
+RUN  cargo build --release
 
 FROM debian:buster-slim
 
 COPY ./config config
-COPY --from=builder /app/target/debug/virgin-media-prometheus-exporter /usr/local/bin
+COPY --from=builder /app/target/release/virgin-media-prometheus-exporter /usr/local/bin
 
 ENTRYPOINT ["./usr/local/bin/virgin-media-prometheus-exporter"]
